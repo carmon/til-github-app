@@ -1,0 +1,8 @@
+{
+    "functions": {
+      "api/til-posts/index.ts": {
+        "includeFiles": "config/defaults.json"
+      }
+    },
+    "rewrites": [{ "source": "/api/(.*)", "destination": "/api" }]
+}
