@@ -1,4 +1,11 @@
 {
+  "ts-node": {
+    "files": true
+  },
+  "files": [
+    "api/index.ts",
+    "api/defs.d.ts"
+  ],
   "compilerOptions": {
     "allowSyntheticDefaultImports": true,
     "alwaysStrict": true,
