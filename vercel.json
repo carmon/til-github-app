@@ -1,6 +1,6 @@
 {
     "functions": {
-      "api/til-posts/index.ts": {
+      "api/**/*.ts": {
         "includeFiles": "config/defaults.json"
       }
     },
