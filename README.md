@@ -3,8 +3,8 @@ til-github-app
 
 Github App that manages a til blog repository.
 
-- Node v18 or greater.
-
+nodejs usuals: `npm i` `npm start` to run locally.
+`/config` folder has the JSON config for the App.
 
 Services for webhooks
 =====================

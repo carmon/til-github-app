@@ -11,4 +11,9 @@ declare module 'dos-config' {
     }
     const config: Config;
     export default config;
-} 
+}
+
+declare module 'minimatch' {
+    export function minimatch(a: string, b:string): boolean;
+}
+

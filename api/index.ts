@@ -1,7 +1,7 @@
 import config from 'dos-config';
 import express from 'express';
+import path from 'path';
 import { minimatch } from 'minimatch';
-import { v4 } from 'uuid';
 
 import createGithub from './services/github';
 
@@ -58,16 +58,8 @@ app.post('/api', async (req, res) => {
   res.end(`Hello! Go the event is: "${event}"`);
 });
 
-app.get('/api', (_req, res) => {
-  const path = `/api/item/${v4()}`;
-  res.setHeader('Content-Type', 'text/html');
-  res.setHeader('Cache-Control', 's-max-age=1, stale-while-revalidate');
-  res.end(`Hello! Go to item: <a href="${path}">${path}</a>`);
-});
-
-app.get('/api/item/:slug', (req, res) => {
-  const { slug } = req.params;
-  res.end(`Item: ${slug}`);
+app.get('/index.html', (_req, res) => {
+  res.sendFile(path.resolve('index.html'));
 });
 
 const port = 8000;
