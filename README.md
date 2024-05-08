@@ -3,7 +3,7 @@ til-github-app
 
 Github App that manages a til blog repository.
 
-nodejs usuals: `npm i` `npm start` to run locally.
+nodejs usuals: `npm i` to install dependencies and `npm start` to run locally.
 `/config` folder has the JSON config for the App.
 
 Services for webhooks
