@@ -32,7 +32,7 @@ app.post('/api', async (req, res) => {
       installationId
     );
 
-    // Get config.json from blog's repo
+    // Get config.json from blog's repo, not an env var since til blog repo already exists
     const cfgBlob = await github.getBlobText(default_branch, 'config.json');
     const blogConfig = JSON.parse(cfgBlob) as BlogConfig;
 

@@ -1,0 +1,21 @@
+# Testing a push in til blog repository, payload only has necessary data
+POST http://localhost:8000/ HTTP/1.1
+content-type: application/json
+X-GitHub-Event: push
+
+{
+  "ref": "refs/heads/main",
+  "repository": {
+    "full_name": "carmon/til",
+    "default_branch": "main"
+  },
+  "installation": {
+    "id": 0
+  },
+  "head_commit": {
+    "removed": [
+      "blog/posts/test-1.md",
+      "blog/posts/test-2.md"
+    ]
+  }
+}

@@ -1,3 +1,4 @@
+// External blog config, resides in a blog repo at config.json file in root folder
 export type BlogConfig = {
   datesFile: string;
   editing: string;
