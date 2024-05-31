@@ -32,3 +32,8 @@ export type GithubPR = {
   number: number;
   sha: string;
 };
+
+export type GithubCommit = {
+  added: string[];
+  removed: string[];
+}

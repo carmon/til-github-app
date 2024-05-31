@@ -1,0 +1,47 @@
+swagger: "2.0"
+info:
+  title: til-github-app API
+  description: Github Application API for managing til-like blog repositories.
+  version: 1.0.0
+host: localhost:8000
+basePath: /
+schemes:
+  - http
+paths:
+  /api:
+    post:
+      summary: Installs application in a new Github repository
+      parameters:
+        - in: header
+          name: x-github-event
+          type: string
+          default: installation_repositories
+        - in: body
+          name: body
+          schema: 
+            type: object
+            properties:
+              installation:
+                type: object
+                properties:
+                  id:
+                    type: integer
+              repository_selection:
+                type: string
+              repositories_added:
+                type: array
+                items:
+                  type: object
+                  properties:
+                    full_name:
+                      type: string
+                  example:
+                    full_name: carmon/testing
+            example:
+              installation:
+                id: 10
+              repository_selection: selected
+              repositories_added: [ full_name: carmon/testing ]
+      responses:
+        200:
+          description: OK
